@@ -21,16 +21,32 @@ body {
   margin-right: auto;
   top: 110px;
   right: 2px;
-  background-color: #5c5c5c;
+  background-color: #000;
   display: grid;
 }
 
-#btn-div {
-  height: 30px;
+#reset-div {
+  height: 50px;
   width: 120px;
   position: relative;
-  top: 142px;
-  left: 17px;
   margin-left: auto;
   margin-right: auto;
+  top: 131px;
+}
+
+#reset-btn {
+  height: 40px;
+  width: 80px;
+  background-color: #e8e8e8;
+  border: 1px solid #c4c3c2;
+  box-shadow: 0px 5px 4px 1px rgb(0, 0, 0, 1);
+  border-radius: 5px;
+  position: relative;
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+#reset-btn:hover {
+  background-color: #dedede;
+  border: 1px solid #b3b2b1;
 }
