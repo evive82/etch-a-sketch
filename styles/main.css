@@ -1,0 +1,40 @@
+body {
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+}
+
+#background {
+  height: 806px;
+  width: 819px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('../images/etch-bg.jpeg');
+}
+
+#canvas {
+  height: 604px;
+  width: 604px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 111px;
+  right: 2px;
+  background-color: #5c5c5c;
+  display: grid;
+}
+
+#btn-div {
+  height: 30px;
+  width: 120px;
+  position: relative;
+  top: 142px;
+  left: 17px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pixels {
+  float: right;
+}
