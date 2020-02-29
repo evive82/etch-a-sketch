@@ -1,7 +1,7 @@
 const canvas = document.getElementById(`canvas`);
 const resetBtn = document.getElementById(`reset-btn`);
 const setBtn = document.getElementById(`set-btn`);
-let pixelRes = 128;
+let pixelRes = 64;
 
 function clearCanvas() {
   while (canvas.lastElementChild) {
@@ -27,7 +27,7 @@ function createCanvas(pixelNum) {
 
 function changePixelColor(index) {
   let pixel = document.querySelectorAll(`.pixels`)[index];
-  let pixelOpacity = pixel.style.opacity - 0.33;
+  let pixelOpacity = pixel.style.opacity - 0.25;
   pixel.style.opacity = pixelOpacity;
 }
 
