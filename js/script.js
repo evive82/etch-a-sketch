@@ -1,7 +1,8 @@
 const canvas = document.getElementById(`canvas`);
 const resetBtn = document.getElementById(`reset-btn`);
-const setBtn = document.getElementById(`set-btn`);
-let pixelRes = 64;
+const setButtons = document.querySelectorAll(`.set-btn`);
+const modal = document.getElementById(`modal`);
+createCanvas(16);
 
 function clearCanvas() {
   while (canvas.lastElementChild) {
@@ -31,19 +32,20 @@ function changePixelColor(index) {
   pixel.style.opacity = pixelOpacity;
 }
 
-function setPixelRes() {
-  let pixelNum = prompt(`How many pixels should there be on each side?`);
-  if (isNaN(pixelNum)) {
-    setPixels();
-  } else {
-    return pixelNum;
-  }
+resetBtn.onclick = () => {
+  modal.style.display = `block`;
 }
 
-resetBtn.addEventListener(`click`, () => {
-  let pixelNum = setPixelRes();
-  if (pixelNum < 1 || !pixelNum) return;
-  createCanvas(pixelNum);
+setButtons.forEach((btn) => {
+  btn.onclick = () => {
+    let pixelNum = btn.getAttribute(`data-val`);
+    createCanvas(pixelNum);
+    modal.style.display = `none`;
+  }
 })
 
-createCanvas(pixelRes);
+window.onclick = (e) => {
+  if (e.target === modal) {
+    modal.style.display = `none`;
+  }
+} 

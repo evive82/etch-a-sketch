@@ -6,6 +6,7 @@
 		<meta charset="UTF-8">
 		<title>Etch-A-Sketch</title>
 		<link href="styles/main.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Acme|Montserrat&display=swap" rel="stylesheet"> 
 	</head>
 
 	<body>
@@ -15,6 +16,22 @@
 			</div>
 			<div id="reset-div">
 				<button id="reset-btn">Reset</button>
+			</div>
+		</div>
+		<div class="modal" id="modal">
+			<div class="modal-window" id="settings">
+				<p id="settings-heading">Choose a grid size</p>
+				<div id="options">
+					<div id="top-row">
+						<button class="set-btn" id="set16" data-val=16>16x16</button>
+						<button class="set-btn" id="set32" data-val=32>32x32</button>
+						<button class="set-btn" id="set64" data-val=64>64x64</button>
+					</div>
+					<div id="bot-row">
+						<button class="set-btn" id="set128" data-val=128>128x128</button>
+						<button class="set-btn" id="set256" title="Slow!" data-val=256>256x256</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
